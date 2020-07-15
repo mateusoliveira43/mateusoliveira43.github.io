@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (1.0+r73+1)"
+   sodipodi:docname="iconfinder_038_008_youtube_video_social_network_android_material_1646914.svg"
+   version="1.1"
+   width="20"
+   viewBox="0 0 20 14"
+   id="Layer_21"
+   height="14"
+   data-name="Layer 21">
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     inkscape:current-layer="Layer_21"
+     inkscape:window-maximized="1"
+     inkscape:window-y="282"
+     inkscape:window-x="1680"
+     inkscape:cy="7"
+     inkscape:cx="9.1428571"
+     inkscape:zoom="22.166667"
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     showgrid="false"
+     id="namedview7"
+     inkscape:window-height="703"
+     inkscape:window-width="1366"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <path
+     id="path4"
+     d="M 19.80731,2.805 A 2.79915,2.79915 0 0 0 17.25824,0.26594 C 15.69061,0.13586 13.36707,0 10.50012,0 7.04761,0 4.44147,0.14105 2.75659,0.27332 A 2.79932,2.79932 0 0 0 0.1925,2.815 C 0.08936,3.90021 0,5.33344 0,7.0423 c 0,1.66632 0.08862,3.07422 0.19128,4.14594 a 2.79852,2.79852 0 0 0 2.56384,2.53833 C 4.43994,13.85883 7.04657,14 10.50012,14 c 2.86694,0 5.19049,-0.13586 6.75812,-0.266 a 2.799,2.799 0 0 0 2.54907,-2.539 C 19.91052,10.11548 20,8.69189 20,7 20,5.30811 19.91052,3.88452 19.80731,2.805 Z M 7.77594,9.93878 V 4.06122 L 13.574,7 Z" />
+</svg>

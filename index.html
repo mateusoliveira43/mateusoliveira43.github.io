@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mateus Souza Oliveira</title>
+    <link rel="icon" href="./assets/img/logo-mateus.svg" type="image/svg+xml" />
+    <!-- <link rel="stylesheet" href="https://latex.now.sh/style.css" /> -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="cabecalho">
+      <span id="home"><a onclick="irHome()"></a></span>
+      <span id="sobre"><a onclick="irSobre()"></a></span>
+      <span id="publicacoes"><a onclick="irPublicacoes()"></a></span>
+      <span id="modelos"><a onclick="irModelos()"></a></span>
+      <span id="jogos"><a onclick="irJogos()"></a></span>
+      <span id="contato"><a onclick="irContato()"></a></span>
+      <button
+        id="trocalingua"
+        class="flush-direita"
+        onclick="trocaLingua()"
+      ></button>
+    </div>
+    <div class="corpo"></div>
+    <div class="rodape">
+      <div class="desenvolvido"></div>
+      <div class="pad-5 box30-30">
+        <a
+          href="https://www.linkedin.com/in/mateus-oliveira-2492851b1/"
+          target="_blank"
+          ><img
+            id="linkedin"
+            src="./assets/img/linkedin-desativado.svg"
+            alt="logo linkedin"
+            onmouseover="hoverAtivo('linkedin')"
+            onmouseout="hoverDesativo('linkedin')"
+            width="30px"
+        /></a>
+      </div>
+      <div class="pad-5 box30-30">
+        <a href="https://github.com/mateusoliveira43" target="_blank"
+          ><img
+            id="github"
+            src="./assets/img/github-desativado.svg"
+            alt="logo github"
+            onmouseover="hoverAtivo('github')"
+            onmouseout="hoverDesativo('github')"
+            width="30px"
+        /></a>
+      </div>
+      <div class="pad-5 box30-30">
+        <a href="mailto:matews1943@gmail.com"
+          ><img
+            id="email"
+            src="./assets/img/email-desativado.svg"
+            alt="logo email"
+            onmouseover="hoverAtivo('email')"
+            onmouseout="hoverDesativo('email')"
+            width="30px"
+        /></a>
+      </div>
+      <div class="pad-5 box30-30">
+        <a
+          href="https://www.youtube.com/channel/UCAXCKVHXg5weD2zqFJ056QQ"
+          target="_blank"
+          ><img
+            id="youtube"
+            src="./assets/img/youtube-desativado.svg"
+            alt="logo youtube"
+            onmouseover="hoverAtivo('youtube')"
+            onmouseout="hoverDesativo('youtube')"
+            width="30px"
+        /></a>
+      </div>
+      <div class="pad-5 box30-30">
+        <a
+          href="http://lattes.cnpq.br/7572519952454058"
+          target="_blank"
+          onmouseover="hoverAtivo('cnpq')"
+          onmouseout="hoverDesativo('cnpq')"
+          ><img
+            id="cnpq"
+            src="./assets/img/cnpq-desativado.svg"
+            alt="logo cnpq"
+            height="30px"
+        /></a>
+      </div>
+      <div class="pad-5 box30-30">
+        <a href="./assets/media/css.pdf" target="_blank"
+          ><img
+            id="cv"
+            src="./assets/img/cv-desativado.svg"
+            alt="logo CV"
+            onmouseover="hoverAtivo('cv')"
+            onmouseout="hoverDesativo('cv')"
+            height="30px"
+        /></a>
+      </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

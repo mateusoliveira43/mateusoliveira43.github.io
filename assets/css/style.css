@@ -1,0 +1,185 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"); */
+
+/* https://www.iconfinder.com/ */
+:root {
+  --cinza-escuro: rgb(100, 100, 100);
+  --verde-escuro: rgb(55, 200, 55);
+  /* Adicior as cores padrão do site aki
+  Selecionar cores em algum lugar */
+}
+
+html {
+  box-sizing: border-box;
+  outline: 0;
+  height: 100%;
+  font-size: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #cfcfcf;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.cabecalho,
+.rodape {
+  padding: 20px 50px;
+  background-color: var(--cinza-escuro);
+}
+
+.cabecalho {
+  top: 0;
+  position: fixed;
+  border-bottom: 2px solid black;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.corpo {
+  margin: 50px;
+}
+
+.rodape {
+  color: black;
+  margin-top: auto;
+  border-top: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cabecalho span {
+  margin-right: 30px;
+}
+
+.img-esquerda {
+  width: 20%;
+  float: left;
+}
+
+.img-direita {
+  width: 20%;
+  float: right;
+}
+
+.linha {
+  display: inline-block;
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:link,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+}
+
+.logo {
+  width: 20%;
+  float: left;
+  padding: 20px;
+  min-width: 80px;
+}
+
+.logo-dir {
+  width: 20%;
+  float: right;
+  padding: 20px;
+}
+
+.ativo {
+  color: white;
+}
+
+.destaque {
+  padding: 10px;
+  background-color: var(--cinza-escuro);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+hr {
+  border: 2px solid black;
+}
+
+ul {
+  overflow: hidden;
+}
+
+.pad-5,
+.desenvolvido {
+  padding: 0 5px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.inlinha {
+  display: flex;
+}
+
+.fill {
+  flex-grow: 1;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-top: 16.5px;
+  border: 1px dashed;
+}
+
+.flush-direita {
+  float: right;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--verde-escuro);
+  color: white;
+  font-size: inherit;
+  padding: 5px; /* 3.5px pra dar match com o rodape */
+  outline: none;
+}
+
+button:hover {
+  background-color: white;
+  color: var(--verde-escuro);
+}
+
+.box30-30 {
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.linha-contato {
+  width: fit-content;
+  align-items: center;
+  display: flex;
+}
+
+.corpo a:hover {
+  text-decoration: underline;
+}
+
+.espaco-lateral {
+  width: 5px;
+}
+
+.par-contato {
+  margin: 20px 50px;
+}
