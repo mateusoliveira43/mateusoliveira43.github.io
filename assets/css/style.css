@@ -1,11 +1,7 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"); */
-
-/* https://www.iconfinder.com/ */
 :root {
   --cinza-escuro: rgb(100, 100, 100);
   --verde-escuro: rgb(55, 200, 55);
-  /* Adicior as cores padrão do site aki
-  Selecionar cores em algum lugar */
+  /* Adicior as cores padrão do site aqui */
 }
 
 html {
@@ -107,6 +103,8 @@ a:hover {
   background-color: var(--cinza-escuro);
   border-radius: 30px;
   overflow: hidden;
+  width: fit-content;
+  margin: auto;
 }
 
 hr {
@@ -149,7 +147,7 @@ button {
   background-color: var(--verde-escuro);
   color: white;
   font-size: inherit;
-  padding: 5px; /* 3.5px pra dar match com o rodape */
+  padding: 5px; /* 3.5px pra dar match com o rodapé */
   outline: none;
 }
 

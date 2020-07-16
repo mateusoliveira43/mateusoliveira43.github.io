@@ -1,4 +1,4 @@
-// Fazer um collapse aki depois
+// Fazer um collapse (ver biblioteca como bootstrap) nesta parte depois
 const corpoContato = '<h1>Contato</h1>\
 <div ><a class="linha-contato" onmouseover="hoverAtivo(`email`,true)" onmouseout="hoverDesativo(`email`,true)"><img src="./assets/img/email-desativado.svg" alt="logo email" width="30px" id="email-contato"/><div class="espaco-lateral"></div>Me envie um e-mail: matews1943 at gmail.com</a></div><p class="par-contato">Descrição do E-mail do mateus Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\
 <div ><a href="https://www.linkedin.com/in/mateus-oliveira-2492851b1/" target="_blank" class="linha-contato" onmouseover="hoverAtivo(`linkedin`,true)" onmouseout="hoverDesativo(`linkedin`,true)"><img src="./assets/img/linkedin-desativado.svg" alt="logo linkedin" width="30px" id="linkedin-contato"/><div class="espaco-lateral"></div>Linkedin do Mateus</a></div><p class="par-contato">Descrição do Linkedin do mateus Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\
@@ -16,22 +16,17 @@ const corpoPublicacoesEN = '<div class="destaque"><div class="logo"><img src="./
 const corpoJogosPT = '<div class="destaque"><div class="logo"><img src="./assets/img/manutencao.svg" alt="Logo de manuntenção" width="100%"/></div><div class="logo-dir"><img src="./assets/img/manutencao.svg" alt="Logo de manuntenção" width="100%"/></div><h1>Seção em construção</h1><p>Nesta seção de <b>Jogos</b>, pretendo colocar os jogos que desenvolvo como exercícios de programação para vocês se divertirem. A princípio, o site só irá rodar jogos desenvolvidos em <b>JavaScript</b>.</p><p>Tem alguma ideia interessante de jogo para eu implementar? Entre em contato comigo!</p></div>';
 const corpoJogosEN = '<div class="destaque"><div class="logo"><img src="./assets/img/manutencao.svg" alt="Logo de manuntenção" width="100%"/></div><div class="logo-dir"><img src="./assets/img/manutencao.svg" alt="Logo de manuntenção" width="100%"/></div><h1>Section under construction</h1><p>In this section of <b>Games</b>, I intend to post the games that I develop as programming training exercises for you to have fun. At first, the site will only run games developed in <b>JavaScript</b>.</p><p>Do you have a interesting idea of a game for me to implement? Get in touch with me!</p></div>';
 
+const corpoHomePT = '<div class="logo"><img src="./assets/img/logo-mateus.svg"alt="Logo do meu site pessoal"width="100%"/></div><h1>Bem-vindo(a) ao meu site pessoal!</h1><hr /><div class="inlinha"><b>Versão 1.00</b><hr class="fill" />Atualizado em 16 de julho de 2020</div><p>Primeira versão do site! Nesta versão:</p><ul><li>Meu objetivo foi fazer uma <i>SPA</i> (sigla do inglês "Sigle Page Application", que significa uma aplicação/aplicativo de página única, isto é, existe apenas uma página web e não uma para cada seção do site) usando apenas <b>HTML</b>, <b>CSS</b> e <b>JavaScript</b>. Com isso, quando aprender algum <i>Framework</i>, quero ver quais as diferenças para se obter o mesmo resultado.</li></ul><p>Recursos que desejo implementar na próxima versão:</p><ul><li>Finalizar as seções em construção.</li><li>Colocar mais efeitos de animação (como de transição de seções) no site.</li><li>Melhorar a versão <i>mobile</i> do site.</li><li>Definir a língua do site de forma automática, com base na localização do usuário.</li><li>implementar recursos de acessibilidade ao site.</li></ul><p>Encontrou algum erro de digitação ou algum <i>bug</i>? Entre em contato comigo para que eu faça as devidas correções.</p><p>Gostou do meu site? <b>Você</b> também deseja ter o <b>seu</b> site pessoal? Entre em contato comigo para fazermos um orçamento!</p><div class="destaque"><i>"If you\'re good at something, never do it for free."</i> <br /><div class="flush-direita">The Joker em THE Dark Knight. Direção de Christopher Nolan. WarnerBros. Pictures, 2008.</div></div>';
+const corpoHomeEN = '<div class="logo"><img src="./assets/img/logo-mateus.svg"alt="Logo do meu site pessoal"width="100%"/></div><h1>Welcome to my personal website!</h1><hr /><div class="inlinha"><b>Versão 1.00</b><hr class="fill" />Atualizado em 16 de julho de 2020</div><p>Primeira versão do site! Nesta versão:</p><ul><li>Meu objetivo foi fazer uma <i>SPA</i> (sigla do inglês "Sigle PageApplication", que significa uma aplicação/aplicativo de página única,isto é, existe apenas uma página web e não uma para cada seção dosite) usando apenas <b>HTML</b>, <b>CSS</b> e <b>JavaScript</b>. Com isso, quando aprender algum <i>Framework</i>, quero ver quais asdiferenças para se obter o mesmo resultado.</li></ul><p>Recursos que desejo implementar na próxima versão:</p><ul><li>Finalizar as seções em construção.</li><li>Colocar mais efeitos de animação (como de transição de seções) no site.</li><li>Melhorar a versão <i>mobile</i> do site.</li><li>Definir a língua do site de forma automática, com base na localização do usuário.</li><li>implementar recursos de acessibilidade ao site.</li></ul><p>Encontrou algum erro de digitação ou algum <i>bug</i>? Entre em contato comigo para que eu faça as devidas correções.</p><p>Gostou do meu site? <b>Você</b> também deseja ter o <b>seu</b> site pessoal? Entre em contato comigo para fazermos um orçamento!</p><div class="destaque"><i>"If you\'re good at something, never do it for free."</i> <br /><div class="flush-direita">The Joker em THE Dark Knight. Direção de Christopher Nolan. WarnerBros. Pictures, 2008.</div></div>';
+
 function irHome() {
   const corpo = document.querySelector('.corpo');
-  corpo.innerHTML = '<div class="logo"> \
-                        <img src="./assets/img/logo-mateus.svg" alt="Logo do meu site pessoal" width="100%"/> \
-                      </div> \
-                      <h1>Bem-Vindo ao meu site pessoal!</h1><hr /> \
-                      <div class="inlinha" ><b>Versão 1.00</b><hr class="fill" />Atualizado em 15 de julho de 2020</div><p>Primeira versão do site! Nesta versão:</p><ul><li>teste</li></ul> \
-                      <p> \
-                        Nessa versão do meu site pessoal, meu objetivo foi fazer uma \
-                        <i>SPA</i> (sigla do inglês "Sigle Page Application", que significa uma \
-                        aplicação/aplicativo de página única, isto é, existe apenas uma página \
-                        web e não uma para cada seção do site) usando apenas <b>HTML</b>,\
-                        <b>CSS</b> e <b>JavaScript</b>. Com isso, quando aprender algum \
-                        <i>Framework</i>, quero ver quais as diferenças para se obter o mesmo \
-                        resultado. \
-                      </p>';
+  if (lingua === 'portugues') {
+    corpo.innerHTML = corpoHomePT;
+  } else {
+    corpo.innerHTML = corpoHomeEN;
+  }
+  window.scrollTo(0, 0);
   ativo('home');
 }
 
@@ -68,6 +63,7 @@ function irSobre() {
       Texto Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \
     </div>\
   </div>';
+  window.scrollTo(0, 0);
   ativo('sobre');
 }
 
@@ -78,6 +74,7 @@ function irModelos() {
   } else {
     corpo.innerHTML = corpoModelosEN;
   }
+  window.scrollTo(0, 0);
   ativo('modelos');
 }
 
@@ -88,12 +85,14 @@ function irPublicacoes() {
   } else {
     corpo.innerHTML = corpoPublicacoesEN;
   }
+  window.scrollTo(0, 0);
   ativo('publicacoes');
 }
 
 function irContato() {
   const corpo = document.querySelector('.corpo');
   corpo.innerHTML = corpoContato;
+  window.scrollTo(0, 0);
   ativo('contato');
 }
 
@@ -104,6 +103,7 @@ function irJogos() {
   } else {
     corpo.innerHTML = corpoJogosEN;
   }
+  window.scrollTo(0, 0);
   ativo('jogos');
 }
 
@@ -186,7 +186,7 @@ function margemAutomatica() {
   document.querySelector('.corpo').style.marginTop = `${alturaCabecalho}px`;
 }
 
-// fazer função para mudar aspecto do rodape e cabecalho se largura menor que 750px
+// fazer função para mudar aspecto do rodape e cabecalho se largura menor que 750px (mobile)
 
 trocaLingua();
 irHome();
