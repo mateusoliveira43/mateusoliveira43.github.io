@@ -1,7 +1,9 @@
 :root {
+  --preto: rgb(0, 0, 0);
+  --branco: rgb(255, 255, 255);
   --cinza-escuro: rgb(100, 100, 100);
-  --verde-escuro: rgb(55, 200, 55);
-  /* Adicior as cores padrão do site aqui */
+  --cinza-claro: rgb(207, 207, 207);
+  --verde: rgb(55, 200, 55);
 }
 
 html {
@@ -14,7 +16,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #cfcfcf;
+  background-color: var(--cinza-claro);
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -30,7 +32,7 @@ body {
 .cabecalho {
   top: 0;
   position: fixed;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--preto);
   width: 100%;
   box-sizing: border-box;
 }
@@ -40,9 +42,8 @@ body {
 }
 
 .rodape {
-  color: black;
   margin-top: auto;
-  border-top: 2px solid black;
+  border-top: 2px solid var(--preto);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,11 +56,13 @@ body {
 .img-esquerda {
   width: 20%;
   float: left;
+  min-width: 100px;
 }
 
 .img-direita {
   width: 20%;
   float: right;
+  min-width: 100px;
 }
 
 .linha {
@@ -73,12 +76,12 @@ a {
 
 a:link,
 a:visited {
-  color: black;
+  color: var(--preto);
   text-decoration: none;
 }
 
 a:hover {
-  color: white;
+  color: var(--branco);
 }
 
 .logo {
@@ -95,20 +98,20 @@ a:hover {
 }
 
 .ativo {
-  color: white;
+  color: var(--branco);
 }
 
 .destaque {
   padding: 10px;
   background-color: var(--cinza-escuro);
-  border-radius: 30px;
+  border-radius: 20px;
   overflow: hidden;
   width: fit-content;
-  margin: auto;
+  margin: 20px auto;
 }
 
 hr {
-  border: 2px solid black;
+  border: 2px solid var(--preto);
 }
 
 ul {
@@ -144,7 +147,7 @@ img {
 button {
   border: none;
   border-radius: 10px;
-  background-color: var(--verde-escuro);
+  background-color: var(--verde);
   color: white;
   font-size: inherit;
   padding: 5px; /* 3.5px pra dar match com o rodapé */
@@ -153,7 +156,7 @@ button {
 
 button:hover {
   background-color: white;
-  color: var(--verde-escuro);
+  color: var(--verde);
 }
 
 .box30-30 {
