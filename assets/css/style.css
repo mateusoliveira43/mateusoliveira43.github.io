@@ -152,6 +152,7 @@ button {
   font-size: inherit;
   padding: 5px; /* 3.5px pra dar match com o rodapé */
   outline: none;
+  cursor: pointer;
 }
 
 button:hover {
