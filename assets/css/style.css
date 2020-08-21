@@ -4,7 +4,7 @@
   --cinza-m-escuro: rgb(80, 80, 80);
   --cinza-escuro: rgb(160, 160, 160);
   --cinza-claro: rgb(220, 220, 220);
-  --success: #28a745;
+  --verde: #28a745;
 }
 
 html {
@@ -21,7 +21,7 @@ body {
 
 .cabecalho,
 .rodape {
-  background-color: var(--success);
+  background-color: var(--verde);
 }
 
 .rodape {
@@ -31,6 +31,10 @@ body {
   align-items: center;
   min-height: 58px;
   color: var(--branco);
+}
+
+.corpo {
+  padding-top: 58px;
 }
 
 .img-esquerda {
@@ -124,32 +128,56 @@ ul {
   margin: 20px 50px;
 }
 
-.btn-outline-light:hover {
-  color: var(--verde);
+button:focus,
+.btn-outline-light.focus,
+.btn-outline-light:focus {
+  outline: 1px dotted;
+  outline: 5px auto var(--branco);
 }
 
 .btn-outline-light:not(:disabled):not(.disabled).active,
 .btn-outline-light:not(:disabled):not(.disabled):active,
 .show > .btn-outline-light.dropdown-toggle {
-  color: var(--success);
+  color: var(--verde);
+}
+
+.btn-outline-light.focus,
+.btn-outline-light:focus {
+  box-shadow: none;
+}
+
+.btn-outline-light:not(:disabled):not(.disabled).active:focus,
+.btn-outline-light:not(:disabled):not(.disabled):active:focus,
+.show > .btn-outline-light.dropdown-toggle:focus {
+  box-shadow: none;
 }
 
 .navbar-dark .navbar-brand {
   color: var(--branco);
 }
-.navbar-dark .navbar-brand:hover {
-  color: var(--success);
+
+.navbar-dark .navbar-brand:hover,
+.navbar-dark .navbar-brand:active {
+  color: var(--verde);
+  background-color: var(--branco);
 }
+
 .navbar-dark .navbar-nav .nav-link {
   color: var(--cinza-m-escuro);
 }
+
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
   color: var(--branco);
 }
+
 .navbar-dark .navbar-toggler {
   color: var(--branco);
   border-color: var(--branco);
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-brand {
