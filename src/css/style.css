@@ -17,6 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  color: var(--preto);
 }
 
 .cabecalho,
@@ -106,21 +107,20 @@ ul {
   border: 1px dashed;
 }
 
-.box30-30 {
-  width: 30px;
-  height: 30px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
 .linha-contato {
   width: fit-content;
   align-items: center;
-  display: flex;
+  font-weight: bold;
+}
+
+.corpo a:link,
+.corpo a:visited {
+  color: var(--verde);
+  text-decoration: none;
 }
 
 .corpo a:hover {
+  color: var(--branco);
   text-decoration: underline;
 }
 
