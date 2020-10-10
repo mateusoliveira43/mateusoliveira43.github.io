@@ -94,16 +94,11 @@ botaoTrocaLingua.addEventListener('click', () => trocaLingua());
 Object.values(listaDeSecoes).forEach((secao) => {
   document.querySelector(`#${secao}`).addEventListener('click', () => irSecao(`${secao}`));
 });
-
-document.addEventListener('mouseover', (e) => {
-  const idMouseOver = e.target.id;
-  if (!idMouseOver) return;
-  hoverAtivo(idMouseOver);
+Object.values(listaDeRedesSociais).forEach((redeSocial) => {
+  document.querySelector(`#${redeSocial}`).addEventListener('mouseover', () => hoverAtivo(redeSocial));
 });
-document.addEventListener('mouseout', (e) => {
-  const idMouseOut = e.target.id;
-  if (!idMouseOut) return;
-  hoverDesativo(idMouseOut);
+Object.values(listaDeRedesSociais).forEach((redeSocial) => {
+  document.querySelector(`#${redeSocial}`).addEventListener('mouseout', () => hoverDesativo(redeSocial));
 });
 
 document.addEventListener('mouseover', (e) => {
@@ -116,6 +111,13 @@ document.addEventListener('mouseover', (e) => {
       hoverAtivo(e.target.children[0].id.replace('-contato', ''), 'contato');
     }
   }
+  if (classMouseOver === 'mr-2') {
+    if (e.target.id.includes('2')) {
+      hoverAtivo(e.target.id.replace('-contato2', ''), 'contato2');
+    } else {
+      hoverAtivo(e.target.id.replace('-contato', ''), 'contato');
+    }
+  }
 });
 
 document.addEventListener('mouseout', (e) => {
@@ -126,6 +128,13 @@ document.addEventListener('mouseout', (e) => {
       hoverDesativo(e.target.children[0].id.replace('-contato2', ''), 'contato2');
     } else {
       hoverDesativo(e.target.children[0].id.replace('-contato', ''), 'contato');
+    }
+  }
+  if (classMouseOut === 'mr-2') {
+    if (e.target.id.includes('2')) {
+      hoverDesativo(e.target.id.replace('-contato2', ''), 'contato2');
+    } else {
+      hoverDesativo(e.target.id.replace('-contato', ''), 'contato');
     }
   }
 });
