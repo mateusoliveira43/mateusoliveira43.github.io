@@ -57,7 +57,7 @@ Object.values(listaDeRedesSociais).forEach((redeSocial) => {
   rodape.innerHTML += `
   <div class="ml-2">
     <a href="${hrefRedesSociais[redeSocial]}" target="_blank">
-      <img id="${redeSocial}" src="./assets/img/${srcImgRedesSociais[redeSocial]}" alt="logo ${redeSocial}" width="30px" />
+      <img id="${redeSocial}" src="../public/assets/img/${srcImgRedesSociais[redeSocial]}" alt="logo ${redeSocial}" width="30px" />
     </a>
   </div>`;
 });
@@ -105,7 +105,7 @@ document.addEventListener('mouseout', (e) => {
 
 // ----------------FUNÇÕES----------------
 function irSecao(secao) {
-  const caminho = `./view/_${secao}${lingua}.html`;
+  const caminho = `../public/view/_${secao}${lingua}.html`;
   fetch(caminho)
     .then((response) => response.text())
     .then((html) => {
@@ -124,20 +124,20 @@ function ativo(novasecao) {
 function hoverAtivo(logo, contato) {
   if (contato) {
     const troca = document.querySelector(`#${logo}-${contato}`);
-    troca.src = `./assets/img/${logo}-ativado.svg`;
+    troca.src = `../public/assets/img/${logo}-ativado.svg`;
   } else {
     const troca = document.querySelector(`#${logo}`);
-    troca.src = `./assets/img/${logo}-ativado.svg`;
+    troca.src = `../public/assets/img/${logo}-ativado.svg`;
   }
 }
 
 function hoverDesativo(logo, contato) {
   if (contato) {
     const troca = document.querySelector(`#${logo}-${contato}`);
-    troca.src = `./assets/img/${logo}-desativado.svg`;
+    troca.src = `../public/assets/img/${logo}-desativado.svg`;
   } else {
     const troca = document.querySelector(`#${logo}`);
-    troca.src = `./assets/img/${logo}-desativado-rodape.svg`;
+    troca.src = `../public/assets/img/${logo}-desativado-rodape.svg`;
   }
 }
 
