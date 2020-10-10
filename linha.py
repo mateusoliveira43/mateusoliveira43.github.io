@@ -1,3 +1,5 @@
+with open('linha.txt', 'w') as writer:
+    body = '''
 <div class="destaque">
   <div class="logo m-2 float-left">
     <img src="./public/assets/img/manutencao.svg" alt="Logo de manuntenção" width="100%" />
@@ -12,3 +14,8 @@
     motivação inicial para ter um site anos atrás.
   </p>
 </div>
+    '''
+    body = body.replace('\n', '')
+    body = body.replace('  ', ' ')
+    body = body.replace("'", '\'')
+    writer.write(body)
