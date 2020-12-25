@@ -1,9 +1,10 @@
 :root {
-  --preto: rgb(0, 0, 0);
+  /* Cores das estruturas do site */
+  --texto: rgb(0, 0, 0);
+  --fundo: rgb(220, 220, 220);
+  --destaque: rgb(160, 160, 160);
   --branco: rgb(255, 255, 255);
-  --cinza-m-escuro: rgb(80, 80, 80);
-  --cinza-escuro: rgb(160, 160, 160);
-  --cinza-claro: rgb(220, 220, 220);
+  --cinza-escuro: rgb(80, 80, 80);
   --verde: #28a745;
 }
 
@@ -12,12 +13,12 @@ html {
 }
 
 body {
-  background-color: var(--cinza-claro);
   min-height: 100%;
   display: flex;
   flex-direction: column;
   width: 100%;
-  color: var(--preto);
+  color: var(--texto);
+  background-color: var(--fundo);
 }
 
 .cabecalho,
@@ -61,7 +62,6 @@ a {
 
 a:link,
 a:visited {
-  color: var(--preto);
   text-decoration: none;
 }
 
@@ -80,15 +80,15 @@ a:hover {
 
 .destaque {
   padding: 10px;
-  background-color: var(--cinza-escuro);
   border-radius: 20px;
   overflow: hidden;
   width: fit-content;
   margin: 20px auto;
+  background-color: var(--destaque);
 }
 
 hr {
-  border: 2px solid var(--preto);
+  border: 2px solid var(--texto);
 }
 
 ul {
@@ -97,6 +97,7 @@ ul {
 
 .inlinha {
   display: flex;
+  border-color: var(--texto);
 }
 
 .fill {
@@ -105,23 +106,28 @@ ul {
   margin-right: 3px;
   margin-top: 16.5px;
   border: 1px dashed;
+  border-color: var(--texto);
 }
 
 .linha-contato {
-  width: fit-content;
-  align-items: center;
   font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+}
+
+.linha-contato:hover > * {
+  color: var(--branco);
 }
 
 .corpo a:link,
 .corpo a:visited {
-  color: var(--verde);
   text-decoration: none;
+  color: var(--verde);
 }
 
 .corpo a:hover {
-  color: var(--branco);
   text-decoration: underline;
+  color: var(--branco);
 }
 
 .par-contato {
@@ -163,7 +169,7 @@ button:focus,
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: var(--cinza-m-escuro);
+  color: var(--cinza-escuro);
 }
 
 .navbar-dark .navbar-nav .nav-link:focus,
@@ -182,4 +188,15 @@ button:focus,
 
 .navbar-brand {
   margin-right: 0;
+  margin-left: 10px;
+}
+
+.redesocial {
+  font-size: 30px;
+  color: var(--branco);
+}
+
+.contato {
+  font-size: 30px;
+  color: var(--verde);
 }
