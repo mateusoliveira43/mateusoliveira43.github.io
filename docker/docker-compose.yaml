@@ -1,0 +1,22 @@
+services:
+  mateusoliveira43:
+    image: mateusoliveira43
+    container_name: mateusoliveira43
+    user:  mateusoliveira43
+    working_dir: /home/mateusoliveira43/mateusoliveira43
+    command: npm start
+    ports:
+      - ${PORT}:${PORT}
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+      args:
+        USER_ID: ${USER_ID}
+        GROUP_ID: ${GROUP_ID}
+        USERNAME: mateusoliveira43
+        WORK_DIR: /home/mateusoliveira43/mateusoliveira43
+    volumes:
+      - type: bind
+        source: ./
+        target: /home/mateusoliveira43/mateusoliveira43
+      - /home/mateusoliveira43/mateusoliveira43/node_modules

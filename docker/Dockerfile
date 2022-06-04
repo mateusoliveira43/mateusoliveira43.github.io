@@ -1,10 +1,18 @@
 FROM node:14.17.3
 
-WORKDIR /mateusoliveira43
+ARG USER_ID
+ARG GROUP_ID
+ARG USERNAME
+ARG WORK_DIR
 
-# Copies files to workdir
-COPY ["package.json", "package-lock.json", "./"]
+RUN userdel -r node \
+    && groupadd --gid $GROUP_ID $USERNAME \
+    && useradd --uid $USER_ID --gid $GROUP_ID --create-home $USERNAME
+USER $USERNAME
 
-# install dependencies
+RUN mkdir $WORK_DIR
+WORKDIR $WORK_DIR
+
+COPY package.json package-lock.json ./
+
 RUN npm ci
-

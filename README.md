@@ -36,7 +36,7 @@ npm start e run build...
 
 To start the development server, on host and port specified in .env file, run
 ```
-docker-compose -f docker/docker-compose.yml --project-directory ./ up
+./docker/run.sh npm start
 ```
 
 For more information about the containers of the project, check the [repository's Wiki](https://github.com/mateusoliveira43/mateusoliveira43.github.io/wiki/Docker).
