@@ -1,0 +1,26 @@
+name: Continuos Delivery
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  javascript-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm ci
+      - name: Test and coverage
+        run: npm test
+      - name: Linter
+        run: npm run lint

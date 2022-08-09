@@ -1,42 +1,57 @@
-# Meu site pessoal!
+# My personal website!
 
-Repositório do [meu site pessoal](https://mateusoliveira43.github.io/), desenvolvido por mim e utilizando [GitHub Pages](https://pages.github.com/).
+[![Continuos Delivery](https://github.com/mateusoliveira43/mateusoliveira43.github.io/actions/workflows/cd.yml/badge.svg)](https://github.com/mateusoliveira43/mateusoliveira43.github.io/actions)
 
 Dúvidas e sugestões de melhoria são bem-vindas! Entre em contato ou abra uma *Issue* ou um *Pull Request* as reportando!
 
-## Tarefas
+# Requirements
 
-Tarefas em aberto parar implementar nas próximas versoões do site (também utilizo o [Trello](https://trello.com) para gerenciar tarefas).
+- [Docker](https://docs.docker.com/get-docker/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
 
-- [ ] Melhorar a aparência visual do site.
-- [ ] Finalizar as seções em construção.
-- [ ] Colocar mais efeitos de animação (como de transição de seções) no site.
-- [ ] Definir a língua do site de forma automática, com base na localização do usuário.
-- [ ] Implementar recursos de acessibilidade ao site.
+# Usage
 
-## Fluxo de desenvolvimento
-
-O site foi desenvolvido usando **HTML**, **CSS** e **JavaScript** com o objetivo de fazer uma SPA (sigla do inglês "Single Page Application", que significa uma aplicação/aplicativo de página única, isto é, existe apenas uma página web e não uma para cada seção do site). Para tal, as seções são salvas em strings no arquivo `main.js` (tentei usar a função `fetch`, mas não funciona com o GitHub Pages).
-
-Para agilizar esse processo, utilizo um script `linha.py` feito em **Python** que lê os arquivos de `./public/view/` e os tranforma em um arquivo de uma única linha. Para utilizá-lo, cole o conteúdo do arquivo na variável `body` e excute
-```bash
-python3 linha.py
+To start the website, run
 ```
-Isso irá criar um arquivo `linha.txt`. Insira o conteúdo na respectiva chave da variável `secoes` em `./src/js/main.js`.
+docker/up.sh
+```
+To stop it, run `CTRL+D` or `exit`.
 
-Vou aprender um pouco sobre a biblioteca **React** nos próximos meses, e pretendo utilizá-la ou o framework **Vue.js** na próxima versão do site, para ver as diferenças no desenvolvimento utilizando essas ferramentas (e se consigo remover o passo intermediário com **Python**).
+To connect to container's shell, run
+```
+docker/run.sh
+```
+To exit the container's shell, run `CTRL+D` or `exit`.
 
-Agora, resta atualizar o arquivo `bundle.js`, gerado pelo **Babel** e **Webpack**. Para instalar as depêndencias do projeto, execute
-```bash
-npm i
+To remove the project's containers, images, volumes and networks, run
+```
+docker/down.sh
 ```
 
-Para rodar o compilador do **Babel** e gerar o arquivo `buldle.js`, execute
-```bash
-npm run converte
+To change Docker/website configuration, change the variables in `.env` file.
+
+# Quality
+
+## Tests
+
+To run tests and coverage report, run
 ```
-Isso deixará o compilador rodando. Para pará-lo, pressione `ctrl+C`.
+npm test
+```
 
-## Licença
+To see the html report, check `coverage-results/lcov-report/index.html`.
 
-Esse repositório é licenciado sob os termos da [Licença MIT](LICENSE).
+Tests and coverage configuration in [`jest.config.ts`](jest.config.ts) file.
+
+## Linter
+
+To run JavaScript linter, run
+```
+npm run lint
+```
+
+JavaScript linter configuration in [`.eslintrc.js`](.eslintrc.js) file.
+
+# License
+
+This repository is licensed under the terms of [MIT License](LICENSE).
