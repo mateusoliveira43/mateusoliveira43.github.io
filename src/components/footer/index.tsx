@@ -19,8 +19,8 @@ function addSocialMedias(): JSX.Element[] {
 
 export default function Footer(): JSX.Element {
   return (
-    <S.Footer className="pl-3 pr-3">
-      &copy; 2020 - {CURRENT_YEAR} Mateus Souza Oliveira
+    <S.Footer>
+      &copy; 2020-{CURRENT_YEAR} Mateus Oliveira
       {addSocialMedias()}
     </S.Footer>
   );

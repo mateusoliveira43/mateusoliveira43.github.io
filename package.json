@@ -1,12 +1,11 @@
 {
-  "homepage": "https://mateusoliveira43.github.io",
   "name": "mateus-souza-oliveira-personal-website",
   "version": "3.0.0",
+  "homepage": "https://mateusoliveira43.github.io",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "bootstrap": "^4.6.0",
-    "gh-pages": "^3.2.2",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
     "react": "^17.0.2",
@@ -40,8 +39,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "serve": "npx serve -s build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
     "test": "jest",
     "lint": "eslint ."
   },

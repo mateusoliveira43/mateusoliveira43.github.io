@@ -10,8 +10,8 @@ import App from '../../src/app/index';
 describe('test if svgTransform works', () => {
   beforeEach(() => render(<App />));
 
-  it('should render "site pessoal!"', () => {
-    const title = screen.getByText(/site pessoal!/);
+  it('should render "Bem-vindo(a)!"', () => {
+    const title = screen.getByText(/Bem-vindo\(a\)!/);
     expect(title).toBeVisible();
   });
 });

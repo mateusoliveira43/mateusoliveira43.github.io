@@ -1,137 +1,57 @@
 # My personal website!
 
-Repository of [my personal website](https://mateusoliveira43.github.io/), develop by me and using [GitHub Pages](https://pages.github.com/).
+[![Continuos Delivery](https://github.com/mateusoliveira43/mateusoliveira43.github.io/actions/workflows/cd.yml/badge.svg)](https://github.com/mateusoliveira43/mateusoliveira43.github.io/actions)
 
-TODO criar essas coisas no repo
 Dúvidas e sugestões de melhoria são bem-vindas! Entre em contato ou abra uma *Issue* ou um *Pull Request* as reportando!
 
-## Initial Setup
+# Requirements
 
-Run all the commands presented in this README in your Linux's Terminal.
+- [Docker](https://docs.docker.com/get-docker/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
 
-citar seção dependências
+# Usage
 
-npm ci is better for CI solutions etc...
-script de inicialização e docker
-
-change `.env` bla bla
-
-## Initialize Server
-
-To create the .env file, run
+To start the website, run
 ```
-./scripts/env.sh
+docker/up.sh
 ```
+To stop it, run `CTRL+D` or `exit`.
 
-### Local Machine
-
-To start the development server, run
+To connect to container's shell, run
 ```
-npm start
+docker/run.sh
 ```
+To exit the container's shell, run `CTRL+D` or `exit`.
 
-npm start e run build...
-
-### Docker
-
-To start the development server, on host and port specified in .env file, run
+To remove the project's containers, images, volumes and networks, run
 ```
-./docker/run.sh npm start
+docker/down.sh
 ```
 
-For more information about the containers of the project, check the [repository's Wiki](https://github.com/mateusoliveira43/mateusoliveira43.github.io/wiki/Docker).
+To change Docker/website configuration, change the variables in `.env` file.
+
+# Quality
 
 ## Tests
 
-To run the project tests, and collect coverage results into **coverage-results** folder, run
+To run tests and coverage report, run
 ```
 npm test
 ```
 
-For more information about testing the project, check the [repository's Wiki](https://github.com/mateusoliveira43/mateusoliveira43.github.io/wiki/Tests).
+To see the html report, check `coverage-results/lcov-report/index.html`.
 
-# Standardization
-TODO regras do Eslint de desabilitar e tal, explicar o que é e comando run lint
+Tests and coverage configuration in [`jest.config.ts`](jest.config.ts) file.
 
-To check code style, run
+## Linter
+
+To run JavaScript linter, run
 ```
 npm run lint
 ```
 
-The website code follows ESLint], Prettier] and a personal list of rules to ensure code style. Check them in the [repository's Wiki](https://github.com/mateusoliveira43/mateusoliveira43.github.io/wiki).
+JavaScript linter configuration in [`.eslintrc.js`](.eslintrc.js) file.
 
-<!-- ## Quality
-TODO se tiver sonar ou algo -->
-
-## Continuous Integration
-TODO GitHub actions
-
-## Requirements
-TODO como adicionar dev e normal dependencies
-
-## Dependencies
-TODO como instalar node e docker (e o que mais for necessário)
-
-## Tasks
-
-To manage the open tasks of the website, I use [this board](https://github.com/mateusoliveira43/mateusoliveira43.github.io/projects) of [GitHub](https://docs.github.com/en/issues/organizing-your-work-with-project-boards).
-
-TODO ver se precisa criar cards para esses pontos
-- [ ] Melhorar a aparência visual do site.
-- [ ] Finalizar as seções em construção.
-- [ ] Colocar mais efeitos de animação (como de transição de seções) no site.
-- [ ] Definir a língua do site de forma automática, com base na localização do usuário.
-- [ ] Implementar recursos de acessibilidade ao site.
-
-## License
+# License
 
 This repository is licensed under the terms of [MIT License](LICENSE).
-
-
-
-<!-- extras para serem incluídos no README ou Wiki -->
-
-## Fluxo de desenvolvimento
-
-TODO escrever sobre desenvolvimento
-
-# comandos
-
-```
-npx create-react-app . --template typescript
-```
-
-TODO JSDOC -> VS CODE /** atalho , ver alternativa para gerar documentação (com typescript não funciona)
-
-TODO script de inicialização
-
-sequência de qualidade
-  - `npm outdated` -> npm update OU npm i [-D] package-name@latest
-  - `npm audit`
-
-comando útil `npm ls`
-
-# como atualizar a versão
-
-TODO
-
-# JS import standard
-
-TODO types: interfaces depois types, em ordem alfabética
-
-TODO ver se os imports estão certos https://github.com/mateusoliveira43/mateusoliveira43.github.io/wiki/Import-Rule
-
-# CSS organization
-
-TODO usar abcss (é esse o nome?)
-
-TODO escrever sobre o deploy
-https://create-react-app.dev/docs/deployment/#github-pages
-
-package.json
-  private?
-  dependências
-  scripts
-  eslint
-  prettier
-  jest.config

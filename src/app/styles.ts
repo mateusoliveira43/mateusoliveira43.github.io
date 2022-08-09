@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
-import * as spaces from '../styles/spaces';
+import spaces from '../styles/spaces';
 
-export const Section = styled.section`
+export const Section = styled.section.attrs({
+  className: 'container my-4',
+})`
   padding-top: ${spaces.headerHeight};
 `;

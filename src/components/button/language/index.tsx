@@ -16,7 +16,7 @@ function addLanguages(
   Object.entries(E.LANGUAGES_LABELS).forEach(([id, label]) => {
     languages.push(
       <li onClick={changeLanguage} className="dropdown-item" id={id} key={id}>
-        {label}
+        <a href="#">{label}</a>
       </li>,
     );
   });
@@ -33,17 +33,11 @@ export default function ButtonLanguage(
 ): JSX.Element {
   return (
     <div className="dropdown btn-group">
-      <S.Button
-        className="dropdown-toggle navbar-brand btn btn-outline-light"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false">
-        {/* TODO colocar fonte que as letras tem o mesmo tamanho (ao trocar PT por EN) */}
-        <span className="fas fa-globe-americas" /> {properties.languageCode}
+      <S.Button>
+        {/* TODO use font where letters have the same size (when language is changed, the button "moves") */}
+        <span className="fas fa-globe-americas" /> {properties.language}
       </S.Button>
-      <S.Ul className="dropdown-menu dropdown-menu-right">
-        {addLanguages(properties.changeLanguage)}
-      </S.Ul>
+      <S.Ul>{addLanguages(properties.changeLanguage)}</S.Ul>
     </div>
   );
 }

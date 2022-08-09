@@ -7,12 +7,9 @@ ARG WORK_DIR
 
 RUN userdel -r node \
     && groupadd --gid $GROUP_ID $USERNAME \
-    && useradd --uid $USER_ID --gid $GROUP_ID --create-home $USERNAME
+    && useradd --uid $USER_ID --gid $GROUP_ID --create-home $USERNAME \
+    && runuser --user $USERNAME -- mkdir $WORK_DIR
 USER $USERNAME
-
-RUN mkdir $WORK_DIR
 WORKDIR $WORK_DIR
-
 COPY package.json package-lock.json ./
-
 RUN npm ci

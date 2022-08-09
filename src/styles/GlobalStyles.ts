@@ -3,46 +3,66 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
 import { createGlobalStyle } from 'styled-components';
 
-import * as colors from './colors';
+import colors from './colors';
 
 export default createGlobalStyle`
   html {
     height: 100%;
   }
+
   body, #root {
-    color: unset;
     background: unset;
-
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
-
+    color: unset;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
   }
 
   .light-mode {
-    color: ${colors.primaryTextColor};
     background: ${colors.primaryBackgroundColor};
+    color: ${colors.primaryTextColor};
+
+    hr {
+      border-top: 2px solid ${colors.primaryColor};
+    }
+
+    div.quote {
+      background-color: ${colors.primaryColor};
+      color: ${colors.secondaryTextColor};
+    }
   }
 
   .dark-mode {
-    color: ${colors.secondaryTextColor};
     background: ${colors.darkerGray};
+    color: ${colors.secondaryTextColor};
+
+    hr {
+      border-top: 2px solid ${colors.primaryBackgroundColor};
+      box-shadow: 0 2px 10px 2px ${colors.primaryColor},  0 -2px 10px 2px ${colors.primaryColor};
+    }
+
+    div.quote {
+      border: 2px solid ${colors.primaryBackgroundColor};
+      box-shadow: inset 0 0 15px 2px ${colors.primaryColor}, 0 0 15px 2px ${colors.primaryColor};
+    }
   }
 
   a {
     cursor: pointer;
   }
 
-  a:link,
-  a:visited {
-    color: ${colors.primaryTextColor};
-    text-decoration: none;
-  }
+  section {
+    a:link,
+    a:visited {
+      color: ${colors.primaryColor};
+      text-decoration: none;
+    }
 
-  a:hover {
-    color: ${colors.secondaryTextColor};
+    a:hover {
+      text-decoration: underline;
+    }
   }
 
   /* ************************* Bootstrap override ************************** */
@@ -52,9 +72,8 @@ export default createGlobalStyle`
 
   button:focus,
   .btn-outline-light.focus,
-  .btn-outline-light:focus {
-    outline: 1px dotted;
-    outline: 5px auto ${colors.secondaryTextColor};
+  .btn-outline-light:focus  {
+    outline: 5px solid ${colors.primaryTextColor};
   }
 
   .btn-outline-light:not(:disabled):not(.disabled).active,
@@ -64,38 +83,31 @@ export default createGlobalStyle`
   }
 
   .btn-outline-light.focus,
-  .btn-outline-light:focus {
-    box-shadow: none;
-  }
-
+  .btn-outline-light:focus,
   .btn-outline-light:not(:disabled):not(.disabled).active:focus,
   .btn-outline-light:not(:disabled):not(.disabled):active:focus,
   .show > .btn-outline-light.dropdown-toggle:focus {
     box-shadow: none;
   }
 
-  .navbar-dark .navbar-brand {
+  .navbar-dark .navbar-brand,
+  .navbar-dark .navbar-nav .nav-link:hover {
     color: ${colors.secondaryTextColor};
   }
 
   .navbar-dark .navbar-brand:hover,
   .navbar-dark .navbar-brand:active {
-    color: ${colors.primaryColor};
     background-color: ${colors.secondaryTextColor};
+    color: ${colors.primaryColor};
   }
 
   .navbar-dark .navbar-nav .nav-link {
     color: ${colors.shadowTextColor};
   }
 
-  .navbar-dark .navbar-nav .nav-link:focus,
-  .navbar-dark .navbar-nav .nav-link:hover {
-    color: ${colors.secondaryTextColor};
-  }
-
   .navbar-dark .navbar-toggler {
-    color: ${colors.secondaryTextColor};
     border-color: ${colors.secondaryTextColor};
+    color: ${colors.secondaryTextColor};
   }
 
   .navbar-dark .navbar-toggler-icon {

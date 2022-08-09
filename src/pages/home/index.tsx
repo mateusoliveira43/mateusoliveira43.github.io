@@ -2,93 +2,134 @@ import React from 'react';
 
 import * as S from './styles';
 import * as T from '../../config/types';
+import colors from '../../styles/colors';
 import Quote from '../../components/quote';
 import Logo from '../../images/logo.svg';
 
-function HomePT(): JSX.Element {
+const greeting: T.languagesMap = {
+  PT: 'Bem-vindo(a)!',
+  EN: 'Welcome!',
+};
+
+const body: T.languagesMap = {
+  PT: 'TRABALHO EM ANDAMENTO',
+  EN: 'WORK IN PROGRESS',
+};
+
+const months: T.months = {
+  PT: [
+    'janeiro',
+    'fevereiro',
+    'março',
+    'abril',
+    'maio',
+    'junho',
+    'julho',
+    'agosto',
+    'setembro',
+    'outubro',
+    'novembro',
+    'dezembro',
+  ],
+  EN: [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ],
+};
+
+// TODO Read version from package.json
+function addVersion(language: T.languagesCode): JSX.Element {
+  const today = new Date();
+  const day = today.getDate();
+  const month = today.getMonth();
+  const year = today.getFullYear();
+  return (
+    <h5>
+      <b>{language === 'PT' ? 'Versão' : 'Version'} 3.0.0:</b>{' '}
+      {language === 'PT'
+        ? `atualizado em ${day} de ${months[language][month]} de ${year}.`
+        : `updated in ${months[language][month]} ${day}, ${year}.`}
+    </h5>
+  );
+}
+
+function addColorPalette(): JSX.Element[] {
+  const colorsForPalette: JSX.Element[] = [];
+  Object.values(colors).forEach((color) => {
+    colorsForPalette.push(
+      <div key={color} style={{ backgroundColor: color, width: '100%' }} />,
+    );
+  });
+  return colorsForPalette;
+}
+
+function addWebsiteInfo(language: T.languagesCode): JSX.Element {
+  return (
+    <p>
+      {language === 'PT' ? 'Este site é um site do ' : 'This is a '}
+      <a
+        href={`https://docs.github.com/${language.toLocaleLowerCase()}/pages`}
+        target="_blank"
+        rel="noreferrer">
+        GitHub Pages
+      </a>
+      {language === 'PT'
+        ? '. Você encontra o código fonte do site '
+        : " website. You find the website's source code "}
+      <a
+        href="https://github.com/mateusoliveira43/mateusoliveira43.github.io"
+        target="_blank"
+        rel="noreferrer">
+        {language === 'PT' ? 'aqui' : 'here'}
+      </a>
+      .
+    </p>
+  );
+}
+
+export default function Home(properties: T.currentLanguage): JSX.Element {
   return (
     <React.Fragment>
-      {/* <div className="logo m-2 float-left"> */}
-      <S.Img src={Logo} alt="deu certo não :(" />
-      {/* </div> */}
-      <h1>Bem-vindo(a) ao meu site pessoal!</h1>
-      <hr className="inlinha" />
-      <div className="inlinha">
-        <b>Versão 2.02</b> <hr className="fill" /> Atualizado em 13 de dezembro
-        de 2020
-      </div>
-      {/* <p>Nesta versão:</p>
-      <ul>
-        <li>
-          Refatoração do código do site: automatização para implementação de
-          novas funcionalidades, aplicando boas práticas de programação e
-          melhora na organização dos arquivos dos corpos das seções para
-          aumentar a produtividade.
-        </li>
-        <li>
-          Uso do compilador <b>Babel</b> para o site funcionar em navegadores
-          mais antigos.
-        </li>
-        <li>
-          Implementação da seção <b>Modelos</b>.
-        </li>
-      </ul>
-      <p>Recursos que desejo implementar na próxima versão:</p>
-      <ul>
-        <li>Melhorar a aparência visual do site.</li>
-        <li>Finalizar as seções em construção.</li>
-        <li>
-          Colocar mais efeitos de animação (como de transição de seções) no
-          site.
-        </li>
-        <li>
-          Definir a língua do site de forma automática, com base na localização
-          do usuário.
-        </li>
-        <li>Implementar recursos de acessibilidade ao site.</li>
-      </ul>
-      <p>
-        Encontrou algum erro de digitação ou algum <i>bug</i>? Entre em contato
-        comigo para que eu faça as devidas correções!
-      </p>
-      <p>
-        Gostou do meu site? <b>Você</b> também deseja ter o <b>seu</b> site
-        pessoal? Entre em contato comigo para fazermos um orçamento!
-      </p> */}
-      {/* <div className="destaque">
-        <i>
-          &quot;If you&apos;re good at something, never do it for free.&quot;
-        </i>
-        <br />
-        <div className="float-right">
-          The Joker em THE Dark Knight. Direção de Christopher Nolan.
-          WarnerBros. Pictures, 2008.
+      <div className="row row-cols-1 row-cols-lg-2 p-1">
+        <div className="col d-flex justify-content-center p-1">
+          <S.Img
+            src={Logo}
+            alt={
+              properties.language === 'PT'
+                ? 'Logotipo do site: letra M sobrepondo o número 43, passando a mensagem M43, dentro de um círculo verde'
+                : "Website's logo: letter M overlapping the number 43, passing the message M43, inside a green circle"
+            }
+          />
         </div>
-      </div> */}
-      <br />
-      <br />
+        <div className="col p-2">
+          <h1>{greeting[properties.language]}</h1>
+          <hr />
+          {addVersion(properties.language)}
+          <hr />
+          <h1>{body[properties.language]}</h1>
+          <S.palette>{addColorPalette()}</S.palette>
+          {addWebsiteInfo(properties.language)}
+        </div>
+      </div>
       <Quote
-        language="PT"
+        language={properties.language}
         line={"If you're good at something, never do it for free."}
         character="The Joker"
-        title="THE dark knight" // TODO fazer primeira palavra upper case na função Quote
+        title="THE Dark Knight"
         director="Christopher Nolan"
         company="WarnerBros. Pictures"
         year={2008}
       />
     </React.Fragment>
   );
-}
-
-function HomeEN(): JSX.Element {
-  return <div>Home EN</div>;
-}
-
-const components: T.sectionsComponents = {
-  PT: <HomePT />,
-  EN: <HomeEN />,
-};
-
-export default function Home(properties: T.sectionsProperties): JSX.Element {
-  return components[properties.language];
 }

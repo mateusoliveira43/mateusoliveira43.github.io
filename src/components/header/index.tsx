@@ -19,10 +19,10 @@ function addSections(
   const sections: JSX.Element[] = [];
   Object.entries(E.SECTIONS_LABELS).forEach(([id, label]) => {
     sections.push(
-      // TODO acho que dá pra melhorar aki (tirar anchor já que não tem href)
       <li className="nav-item" id={id} key={id}>
         <a
-          className="nav-link pl-0"
+          href="#"
+          className="nav-link ml-0"
           onClick={() => changeSection(id as T.sections)}>
           {label[language]}
         </a>
@@ -39,7 +39,7 @@ function addSections(
  */
 export default function Header(properties: T.headerProperties): JSX.Element {
   return (
-    <S.Header className="fixed-top">
+    <S.Header>
       <nav className="navbar navbar-expand-md navbar-dark">
         <button
           className="navbar-toggler"
@@ -55,12 +55,15 @@ export default function Header(properties: T.headerProperties): JSX.Element {
           <ButtonMode changeMode={properties.changeMode} />
           <ButtonLanguage
             changeLanguage={properties.changeLanguage}
-            languageCode={properties.languageCode}
+            language={properties.language}
           />
         </span>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div
+          role="navigation"
+          className="collapse navbar-collapse"
+          id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            {addSections(properties.changeSection, properties.languageCode)}
+            {addSections(properties.changeSection, properties.language)}
           </ul>
         </div>
       </nav>

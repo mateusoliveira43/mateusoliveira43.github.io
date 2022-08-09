@@ -8,13 +8,13 @@ describe('Website footer', () => {
 
   describe('Copyright information', () => {
     it('should render the name of the author', () => {
-      const footer = screen.getByText(/Mateus Souza Oliveira/);
+      const footer = screen.getByText(/Mateus Oliveira/);
       expect(footer).toBeVisible();
     });
 
     it('should render the initial and current year of the website', () => {
-      const footer = screen.getByText(/Mateus Souza Oliveira/);
-      expect(footer.innerHTML).toContain('2020 - 2021');
+      const footer = screen.getByText(/Mateus Oliveira/);
+      expect(footer.innerHTML).toContain('2020-2022');
     });
   });
 

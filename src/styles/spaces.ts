@@ -1,1 +1,4 @@
-export const headerHeight = '58px';
+const SPACES = {
+  headerHeight: '58px',
+};
+export default SPACES;

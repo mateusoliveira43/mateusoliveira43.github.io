@@ -3,29 +3,24 @@ import React from 'react';
 import * as S from './styles';
 import * as T from '../../config/types';
 
-// const quoteLanguage = {
-//   PT: 'em',
-//   EN: 'in',
-// }; // TODO tipar
+const preposition: T.languagesMap = {
+  PT: 'em ',
+  EN: 'in ',
+};
 
-// TODO fazer return único e lógica de língua nele
+const directedBy: T.languagesMap = {
+  PT: 'Direção de ',
+  EN: 'Directed by ',
+};
+
+// TODO find a reference on how to quote character lines and add it here
 export default function Quote(properties: T.movieQuoteProperties): JSX.Element {
-  if (properties.language === 'PT') {
-    return (
-      <S.Div className="p-2">
-        <q>{properties.line}</q>
-        <p>
-          {properties.character} em <cite>{properties.title}</cite>. Direção de{' '}
-          {properties.director}. {properties.company}, {properties.year}.
-        </p>
-      </S.Div>
-    );
-  }
   return (
-    <S.Div className="p-2">
+    <S.Div>
       <q>{properties.line}</q>
-      <p>
-        {properties.character} in <cite>{properties.title}</cite>. Directed by{' '}
+      <p className="pt-2">
+        {properties.character} {preposition[properties.language]}
+        <cite>{properties.title}</cite>. {directedBy[properties.language]}
         {properties.director}. {properties.company}, {properties.year}.
       </p>
     </S.Div>

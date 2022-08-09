@@ -4,7 +4,9 @@ services:
     container_name: mateusoliveira43
     user:  mateusoliveira43
     working_dir: /home/mateusoliveira43/mateusoliveira43
-    command: npm start
+    hostname: docker
+    entrypoint: ["npm", "run"]
+    command: ["start"]
     ports:
       - ${PORT}:${PORT}
     build:

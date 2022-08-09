@@ -7,10 +7,7 @@ import * as E from '../config/enums';
 import * as T from '../config/types';
 import About from '../pages/about';
 import Contact from '../pages/contact';
-import Games from '../pages/games';
 import Home from '../pages/home';
-import Publications from '../pages/publications';
-import Templates from '../pages/templates';
 import GlobalStyle from '../styles/GlobalStyles';
 
 const getSection = (
@@ -18,9 +15,6 @@ const getSection = (
 ): T.sectionsLanguagesComponents => ({
   home: <Home language={language} />,
   about: <About language={language} />,
-  publications: <Publications language={language} />,
-  templates: <Templates language={language} />,
-  games: <Games language={language} />,
   contact: <Contact language={language} />,
 });
 
@@ -32,13 +26,12 @@ export default function App(): JSX.Element {
     <Home language={language} />,
   );
 
-  function changeSection(section: T.sections): void {
-    // TODO ver se precisa refatorar aqui
+  function changeSection(selectedSection: T.sections): void {
     document.querySelector('#navbarSupportedContent')?.classList.remove('show');
     document.querySelector(`#${activeSection}`)?.classList.remove('active');
-    document.querySelector(`#${section}`)?.classList.add('active');
-    setSection(getSection(language)[section]);
-    setActiveSection(section);
+    document.querySelector(`#${selectedSection}`)?.classList.add('active');
+    setSection(getSection(language)[selectedSection]);
+    setActiveSection(selectedSection);
   }
 
   function changeMode(): void {
@@ -82,10 +75,10 @@ export default function App(): JSX.Element {
         changeSection={changeSection}
         changeMode={changeMode}
         changeLanguage={changeLanguage}
-        languageCode={language}
+        language={language}
       />
-      <main className="mt-auto mb-auto">
-        <S.Section className="container mt-4 mb-4">{section}</S.Section>
+      <main className="my-auto">
+        <S.Section>{section}</S.Section>
       </main>
       <Footer />
     </React.Fragment>

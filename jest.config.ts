@@ -1,5 +1,6 @@
 import type { Config } from '@jest/types';
 
+// TODO option to turn warnings into errors?
 const coveragePercentage = 0; // TODO change to 100
 const testUtilsPath = '<rootDir>/tests/tests-utils';
 const config: Config.InitialOptions = {

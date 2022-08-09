@@ -1,18 +1,17 @@
 import styled from 'styled-components';
 
-import * as colors from '../../styles/colors';
+import colors from '../../styles/colors';
 
-export const Footer = styled.footer`
-  color: ${colors.secondaryTextColor};
+export const Footer = styled.footer.attrs({
+  className: 'px-3',
+})`
+  align-items: center;
   background-color: ${colors.primaryColor};
-
-  min-height: 58px;
-
+  color: ${colors.secondaryTextColor};
   display: flex;
   justify-content: center;
-  align-items: center;
+  min-height: 58px;
 
-  /* TODO precisa? */
   a:link,
   a:visited {
     color: ${colors.secondaryTextColor};
