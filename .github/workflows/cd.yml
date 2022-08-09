@@ -3,7 +3,7 @@ name: Continuos Delivery
 on:
   push:
     branches:
-      - main
+      - develop
 
 permissions:
   contents: write
