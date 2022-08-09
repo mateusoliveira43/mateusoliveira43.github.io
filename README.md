@@ -1,5 +1,6 @@
 # My personal website!
 
+[![Continuos Integration](https://github.com/mateusoliveira43/mateusoliveira43.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/mateusoliveira43/mateusoliveira43.github.io/actions)
 [![Continuos Delivery](https://github.com/mateusoliveira43/mateusoliveira43.github.io/actions/workflows/cd.yml/badge.svg)](https://github.com/mateusoliveira43/mateusoliveira43.github.io/actions)
 
 Dúvidas e sugestões de melhoria são bem-vindas! Entre em contato ou abra uma *Issue* ou um *Pull Request* as reportando!
@@ -32,6 +33,8 @@ To change Docker/website configuration, change the variables in `.env` file.
 
 # Quality
 
+citar arquivo yml
+
 ## Tests
 
 To run tests and coverage report, run
@@ -51,6 +54,10 @@ npm run lint
 ```
 
 JavaScript linter configuration in [`.eslintrc.js`](.eslintrc.js) file.
+
+sequência de qualidade
+  - `npm outdated` -> npm update OU npm i [-D] package-name@latest
+  - `npm audit`
 
 # License
 

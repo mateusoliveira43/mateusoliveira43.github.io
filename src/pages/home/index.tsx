@@ -12,7 +12,24 @@ const greeting: T.languagesMap = {
 };
 
 const body: T.languagesMap = {
-  PT: 'TRABALHO EM ANDAMENTO',
+  PT: `Aqui no meu site pessoal você encontra minhas informações de contato, trabalho,
+  projetos pessoais, bobbies entre outras coisas.
+
+  Minha motivação inicial para ter um site veio anos atrás, quando
+  queria ter um local pra disponibilizar meus modelos LaTeX ao público.
+  Hoje em dia minha motivação mudou, e o objetivo com o site é mostrar
+  um pouco de mim e minhas habilidades como programador ao mundo.
+
+  O site foi desenvolvido usando React[link] e TypeScript[link] com o objetivo
+  de fazer uma SPA (sigla do inglês "Single Page Application", que
+  significa uma aplicação/aplicativo de página única, isto é, existe
+  apenas uma página web e não uma para cada seção do site).
+
+  O site e logo foram desenvolvidos por mim, apesar de eu não ser da área de Design.
+  Em relação as cores, quis ser minimalista e elas foram escolhidas por conta da
+  minha paixão pelo meu time de futebol, o Goiás Esporte Clube. Essa paixão também
+  influenciou no logo, que é a sobreposição da letra M, inicial do meu nome,com o
+  número 43, fazendo alusão ao ano de 1943, quando o Goiás foi fundado.`,
   EN: 'WORK IN PROGRESS',
 };
 

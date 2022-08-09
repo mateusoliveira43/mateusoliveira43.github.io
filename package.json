@@ -1,5 +1,5 @@
 {
-  "name": "mateus-souza-oliveira-personal-website",
+  "name": "m43-website",
   "version": "3.0.0",
   "homepage": "https://mateusoliveira43.github.io",
   "private": true,
@@ -32,7 +32,7 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.3.1",
-    "serve": "^12.0.0",
+    "serve": "^14.0.1",
     "ts-node": "^10.0.0"
   },
   "scripts": {
