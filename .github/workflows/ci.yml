@@ -25,9 +25,7 @@ jobs:
       - name: Linter
         run: npm run lint
       - name: Security vulnerability scan
-        run: |
-          npm audit
-          npm outdated
+        run: npm outdated
 
   docker-check:
     runs-on: ubuntu-latest
