@@ -1,15 +1,16 @@
-FROM node:14.17.3
+FROM node:14.20.0-alpine3.15
 
 ARG USER_ID
 ARG GROUP_ID
-ARG USERNAME
+ARG USER_NAME
+ARG USER_HOME
 ARG WORK_DIR
 
-RUN userdel -r node \
-    && groupadd --gid $GROUP_ID $USERNAME \
-    && useradd --uid $USER_ID --gid $GROUP_ID --create-home $USERNAME \
-    && runuser --user $USERNAME -- mkdir $WORK_DIR
-USER $USERNAME
+RUN deluser node \
+    && addgroup --gid $GROUP_ID $USER_NAME \
+    && adduser --uid $USER_ID --ingroup $USER_NAME --home $USER_HOME --disabled-password $USER_NAME
+USER $USER_NAME
+RUN mkdir $WORK_DIR
 WORKDIR $WORK_DIR
 COPY package.json package-lock.json ./
 RUN npm ci

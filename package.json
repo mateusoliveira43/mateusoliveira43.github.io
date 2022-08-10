@@ -38,7 +38,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "serve": "npx serve -s build",
+    "prod": "npx serve -s build",
     "test": "jest",
     "lint": "eslint ."
   },

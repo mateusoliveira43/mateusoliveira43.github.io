@@ -3,8 +3,6 @@ import React from 'react';
 import * as S from './styles';
 import * as E from '../../config/enums';
 
-const CURRENT_YEAR = new Date().getFullYear();
-
 function addSocialMedias(): JSX.Element[] {
   const socialMedias: JSX.Element[] = [];
   Object.entries(E.SOCIAL_MEDIAS_LINKS).forEach(([id, link]) => {
@@ -20,7 +18,7 @@ function addSocialMedias(): JSX.Element[] {
 export default function Footer(): JSX.Element {
   return (
     <S.Footer>
-      &copy; 2020-{CURRENT_YEAR} Mateus Oliveira
+      &copy; 2020-2022 Mateus Oliveira
       {addSocialMedias()}
     </S.Footer>
   );

@@ -33,7 +33,7 @@ const body: T.languagesMap = {
   EN: 'WORK IN PROGRESS',
 };
 
-const months: T.months = {
+const MONTHS: T.months = {
   PT: [
     'janeiro',
     'fevereiro',
@@ -65,17 +65,17 @@ const months: T.months = {
 };
 
 // TODO Read version from package.json
+// TODO create test for date
 function addVersion(language: T.languagesCode): JSX.Element {
-  const today = new Date();
-  const day = today.getDate();
-  const month = today.getMonth();
-  const year = today.getFullYear();
+  const day = 10;
+  const month = 8;
+  const year = 2022;
   return (
     <h5>
       <b>{language === 'PT' ? 'Versão' : 'Version'} 3.0.0:</b>{' '}
       {language === 'PT'
-        ? `atualizado em ${day} de ${months[language][month]} de ${year}.`
-        : `updated in ${months[language][month]} ${day}, ${year}.`}
+        ? `atualizado em ${day} de ${MONTHS[language][month-1]} de ${year}.`
+        : `updated in ${MONTHS[language][month-1]} ${day}, ${year}.`}
     </h5>
   );
 }

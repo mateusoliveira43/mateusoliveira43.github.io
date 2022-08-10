@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react';
 
 import Footer from '../../../src/components/footer';
 
+
 describe('Website footer', () => {
   beforeEach(() => render(<Footer />));
 
@@ -14,7 +15,8 @@ describe('Website footer', () => {
 
     it('should render the initial and current year of the website', () => {
       const footer = screen.getByText(/Mateus Oliveira/);
-      expect(footer.innerHTML).toContain('2020-2022');
+      const CURRENT_YEAR = new Date().getFullYear();
+      expect(footer.innerHTML).toContain(`2020-${CURRENT_YEAR}`);
     });
   });
 
