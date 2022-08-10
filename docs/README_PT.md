@@ -112,7 +112,7 @@ npm audit
 ```
 Para checar dependências JavaScript desatualizadas, execute
 ```
-npm outdated
+npm outdated --long
 ```
 
 # Licença

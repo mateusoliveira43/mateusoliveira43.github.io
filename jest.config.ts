@@ -8,7 +8,6 @@ const config: Config.InitialOptions = {
   verbose: true,
   collectCoverage: true,
   coverageDirectory: '<rootDir>/coverage-results/',
-  coveragePathIgnorePatterns: ['config/', 'styles/', 'styles.ts'],
   coverageReporters: ['lcov', 'text'],
   coverageThreshold: {
     global: {
@@ -18,6 +17,7 @@ const config: Config.InitialOptions = {
       statements: coveragePercentage,
     },
   },
+  testEnvironment: 'jsdom',
   setupFilesAfterEnv: [`${testUtilsPath}/setupTests.ts`],
   transform: {
     '^.+\\.(j|t)sx?$': 'babel-jest',

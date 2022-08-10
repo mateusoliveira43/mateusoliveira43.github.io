@@ -113,7 +113,7 @@ npm audit
 
 To check for outdated JavaScript dependencies, run
 ```
-npm outdated
+npm outdated --long
 ```
 
 # License

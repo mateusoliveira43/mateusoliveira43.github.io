@@ -133,7 +133,7 @@ export default function Home(properties: T.currentLanguage): JSX.Element {
           <hr />
           {addVersion(properties.language)}
           <hr />
-          <h1>{body[properties.language]}</h1>
+          {body[properties.language]}
           <S.palette>{addColorPalette()}</S.palette>
           {addWebsiteInfo(properties.language)}
         </div>
