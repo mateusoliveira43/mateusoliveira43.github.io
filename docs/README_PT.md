@@ -28,6 +28,8 @@ Para trocar as configurações do Docker/site, mude as variáveis no arquivo `.e
 
 ## Docker
 
+Execute os comandos apresentados nessa seção em uma shell Linux.
+
 Para rodar o site (em mode de desenvolvimento), execute
 ```
 docker/up.sh

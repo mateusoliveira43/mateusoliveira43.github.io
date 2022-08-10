@@ -28,6 +28,8 @@ To change Docker/website configuration, change the variables in `.env` file. It 
 
 ## Docker
 
+Run the commands presented in this section in a Linux's shell.
+
 To start the website (in development mode), run
 ```
 docker/up.sh

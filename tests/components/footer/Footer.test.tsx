@@ -3,7 +3,6 @@ import { render, screen } from '@testing-library/react';
 
 import Footer from '../../../src/components/footer';
 
-
 describe('Website footer', () => {
   beforeEach(() => render(<Footer />));
 

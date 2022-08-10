@@ -74,8 +74,8 @@ function addVersion(language: T.languagesCode): JSX.Element {
     <h5>
       <b>{language === 'PT' ? 'Versão' : 'Version'} 3.0.0:</b>{' '}
       {language === 'PT'
-        ? `atualizado em ${day} de ${MONTHS[language][month-1]} de ${year}.`
-        : `updated in ${MONTHS[language][month-1]} ${day}, ${year}.`}
+        ? `atualizado em ${day} de ${MONTHS[language][month - 1]} de ${year}.`
+        : `updated in ${MONTHS[language][month - 1]} ${day}, ${year}.`}
     </h5>
   );
 }
