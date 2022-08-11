@@ -12,5 +12,3 @@ RUN deluser node \
 USER $USER_NAME
 RUN mkdir $WORK_DIR
 WORKDIR $WORK_DIR
-COPY package.json package-lock.json ./
-RUN npm ci

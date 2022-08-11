@@ -51,6 +51,11 @@ docker/down.sh
 
 Run the commands presented in this section in the container's shell.
 
+To install the website dependencies, run
+```
+npm ci
+```
+
 To run the website in development mode, run
 ```
 npm start

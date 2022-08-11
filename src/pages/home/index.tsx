@@ -67,7 +67,7 @@ const MONTHS: T.months = {
 // TODO Read version from package.json
 // TODO create test for date
 function addVersion(language: T.languagesCode): JSX.Element {
-  const day = 10;
+  const day = 11;
   const month = 8;
   const year = 2022;
   return (
