@@ -1,12 +1,9 @@
 import React from 'react';
 
 import * as S from './styles';
+import * as E from '../../config/enums';
 import * as T from '../../config/types';
-
-const TITLE: T.languagesMap = {
-  PT: 'Contato',
-  EN: 'Contact',
-};
+import Quote from '../../components/quote';
 
 function addSocialMedia(
   link: string,
@@ -33,7 +30,9 @@ function addSocialMedia(
 export default function Contact(properties: T.currentLanguage): JSX.Element {
   return (
     <React.Fragment>
-      <h1 className="mb-4">{TITLE[properties.language]}</h1>
+      <h1 className="mb-4">
+        {E.SECTIONS_LABELS['contact'][properties.language]}
+      </h1>
 
       <div className="row row-cols-2 row-cols-lg-3 p-1">
         {addSocialMedia(
@@ -97,6 +96,15 @@ export default function Contact(properties: T.currentLanguage): JSX.Element {
           false,
         )}
       </div>
+      <Quote
+        language={properties.language}
+        line={"If you're good at something, never do it for free."}
+        character="The Joker"
+        title="THE Dark Knight"
+        director="Christopher Nolan"
+        company="WarnerBros. Pictures"
+        year={2008}
+      />
     </React.Fragment>
   );
 }
