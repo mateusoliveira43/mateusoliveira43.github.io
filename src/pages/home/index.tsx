@@ -6,17 +6,47 @@ import colors from '../../styles/colors';
 import Quote from '../../components/quote';
 import Logo from '../../images/logo.svg';
 
-const greeting: T.languagesMap = {
+const GREETING: T.languagesMap = {
   PT: 'Bem-vindo(a)!',
-  EN: 'Welcome!',
+  EN: 'Hello there!',
 };
 
-const body: T.languagesMap = {
-  PT: 'TRABALHO EM ANDAMENTO',
-  EN: 'WORK IN PROGRESS',
+const BODY: T.sectionsComponents = {
+  PT: (
+    <React.Fragment>
+      <p>
+        Aqui no meu site pessoal você encontra minhas informações de contato e
+        interesses profissionais e pessoais!
+      </p>
+      <p>
+        O site e o logotipo foram desenvolvidos por mim, apesar de eu não ser da
+        área de Design. Em relação as cores, quis ser minimalista e elas foram
+        escolhidas por conta da minha paixão pelo meu time de futebol, o Goiás
+        Esporte Clube. Esse amor também influenciou no logotipo, que é a
+        sobreposição da letra M, inicial do meu nome, com o número 43, fazendo
+        alusão ao ano de 1943, quando o time foi fundado.
+      </p>
+    </React.Fragment>
+  ),
+  EN: (
+    <React.Fragment>
+      <p>
+        Here in my personal website you find my contact information and my
+        professional and personal interests.
+      </p>
+      <p>
+        The site and the logo were developed by me, although I am not from the
+        design area. About the colors, I wanted to be minimalist and they were
+        chosen because of my passion for my soccer team, Goiás Esporte Clube.
+        This love also influenced the logo, which is the overlap of the letter
+        M, initial of my name, with the number 43, which refers to the year of
+        1943, when the team was founded.
+      </p>
+    </React.Fragment>
+  ),
 };
 
-const months: T.months = {
+const MONTHS: T.months = {
   PT: [
     'janeiro',
     'fevereiro',
@@ -48,17 +78,17 @@ const months: T.months = {
 };
 
 // TODO Read version from package.json
+// TODO create test for date
 function addVersion(language: T.languagesCode): JSX.Element {
-  const today = new Date();
-  const day = today.getDate();
-  const month = today.getMonth();
-  const year = today.getFullYear();
+  const day = 11;
+  const month = 8;
+  const year = 2022;
   return (
     <h5>
       <b>{language === 'PT' ? 'Versão' : 'Version'} 3.0.0:</b>{' '}
       {language === 'PT'
-        ? `atualizado em ${day} de ${months[language][month]} de ${year}.`
-        : `updated in ${months[language][month]} ${day}, ${year}.`}
+        ? `atualizado em ${day} de ${MONTHS[language][month - 1]} de ${year}.`
+        : `updated in ${MONTHS[language][month - 1]} ${day}, ${year}.`}
     </h5>
   );
 }
@@ -112,23 +142,23 @@ export default function Home(properties: T.currentLanguage): JSX.Element {
           />
         </div>
         <div className="col p-2">
-          <h1>{greeting[properties.language]}</h1>
+          <h1>{GREETING[properties.language]}</h1>
           <hr />
           {addVersion(properties.language)}
           <hr />
-          <h1>{body[properties.language]}</h1>
+          {BODY[properties.language]}
           <S.palette>{addColorPalette()}</S.palette>
           {addWebsiteInfo(properties.language)}
         </div>
       </div>
       <Quote
         language={properties.language}
-        line={"If you're good at something, never do it for free."}
-        character="The Joker"
-        title="THE Dark Knight"
-        director="Christopher Nolan"
-        company="WarnerBros. Pictures"
-        year={2008}
+        line={'Hello there!'}
+        character="Obi-Wan Kenobi"
+        title="STAR Wars: Episode III - Revenge of the Sith"
+        director="George Lucas"
+        company="20th Century Fox"
+        year={2005}
       />
     </React.Fragment>
   );

@@ -1,12 +1,8 @@
 services:
-  mateusoliveira43:
-    image: mateusoliveira43
-    container_name: mateusoliveira43
-    user:  mateusoliveira43
-    working_dir: /home/mateusoliveira43/mateusoliveira43
-    hostname: docker
-    entrypoint: ["npm", "run"]
-    command: ["start"]
+  m43:
+    image: ${PROJECT_NAME}
+    container_name: ${PROJECT_NAME}
+    entrypoint: ["./docker/entrypoint.sh"]
     ports:
       - ${PORT}:${PORT}
     build:
@@ -15,10 +11,10 @@ services:
       args:
         USER_ID: ${USER_ID}
         GROUP_ID: ${GROUP_ID}
-        USERNAME: mateusoliveira43
-        WORK_DIR: /home/mateusoliveira43/mateusoliveira43
+        USER_NAME: ${USER_NAME}
+        USER_HOME: ${USER_HOME}
+        WORK_DIR: ${WORK_DIR}
     volumes:
       - type: bind
         source: ./
-        target: /home/mateusoliveira43/mateusoliveira43
-      - /home/mateusoliveira43/mateusoliveira43/node_modules
+        target: ${WORK_DIR}/

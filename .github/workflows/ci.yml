@@ -1,4 +1,4 @@
-name: Continuos Delivery
+name: Continuos Integration
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
 
       - name: Install dependencies
         run: npm ci
@@ -24,3 +24,25 @@ jobs:
         run: npm test
       - name: Linter
         run: npm run lint
+      # - name: Security vulnerability scan
+      #   run: |
+      #     npm audit
+      #     npm outdated --long
+
+  docker-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      # - name: Build Docker image
+      #   run: docker build --tag m43 --file docker/Dockerfile .
+      - name: Dockerfile linter
+        uses: hadolint/hadolint-action@v2.0.0
+        with:
+          dockerfile: docker/Dockerfile
+      # - name: Docker image security vulnerability scan
+      #   uses: snyk/actions/docker@master
+      #   env:
+      #     SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      #   with:
+      #     image: m43
+      #     args: --severity-threshold=medium --file=docker/Dockerfile
