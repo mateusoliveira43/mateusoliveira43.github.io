@@ -1,5 +1,6 @@
 import React from 'react';
 
+import * as S from './styles';
 import * as E from '../../config/enums';
 import * as T from '../../config/types';
 import Quote from '../../components/quote';
@@ -122,33 +123,9 @@ const COMMUNITY: T.sectionsComponents = {
         </a>{' '}
         durante a pandemia. Também já palestrei sobre os seguintes assuntos.
       </p>
-      <ul>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=WRJGogeSMqU"
-            target="_blank"
-            rel="noreferrer">
-            Construindo uma interface de linha de comando com a biblioteca
-            argparse
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=_78stm2WpYM"
-            target="_blank"
-            rel="noreferrer">
-            Configurando o novo site da python Floripa
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=eO1IbmsrcOQ"
-            target="_blank"
-            rel="noreferrer">
-            Em busca da primeira oportunidade como pessoa desenvolvedora
-          </a>
-        </li>
-      </ul>
+      {addTalks('PT')}
+      <p>Mantenho os seguintes projetos atualmente:</p>
+      {addCodes('PT')}
     </React.Fragment>
   ),
   EN: (
@@ -164,32 +141,9 @@ const COMMUNITY: T.sectionsComponents = {
         during the pandemic. I have also already given talks (in Portuguese)
         about the following topics.
       </p>
-      <ul>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=WRJGogeSMqU"
-            target="_blank"
-            rel="noreferrer">
-            Building a command line interface with the argparse library
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=_78stm2WpYM"
-            target="_blank"
-            rel="noreferrer">
-            Configuring the new Florianópolis Python community website
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=eO1IbmsrcOQ"
-            target="_blank"
-            rel="noreferrer">
-            Searching for the first opportunity as a developer
-          </a>
-        </li>
-      </ul>
+      {addTalks('EN')}
+      <p>I currently maintain the following projects:</p>
+      {addCodes('EN')}
     </React.Fragment>
   ),
 };
@@ -313,13 +267,7 @@ const PERSONAL: T.sectionsComponents = {
         E é claro, também gosto de jogar videogame, que foi o estopim para me
         tornar desenvolvedor de software. Entre todos os jogos que joguei,
         sempre gosto de citar esses:
-        <ul>
-          <li>Crash Bandicoot</li>
-          <li>THE LAST OF US</li>
-          <li>inFAMOUS</li>
-          <li>STAR WARS THE FORCE UNLEASHED</li>
-          <li>MEGAMAN</li>
-        </ul>
+        {addGames()}
       </p>
     </React.Fragment>
   ),
@@ -343,17 +291,99 @@ const PERSONAL: T.sectionsComponents = {
         And of course, I also like playing videogame, which was the reason I
         became a software developer. Among all games I have played, I always
         like to cite these ones:
-        <ul>
-          <li>Crash Bandicoot</li>
-          <li>THE LAST OF US</li>
-          <li>inFAMOUS</li>
-          <li>STAR WARS THE FORCE UNLEASHED</li>
-          <li>MEGAMAN</li>
-        </ul>
+        {addGames()}
       </p>
     </React.Fragment>
   ),
 };
+
+function addTalks(language: T.languagesCode): JSX.Element {
+  return (
+    <ul>
+      <li>
+        <a
+          href="https://www.youtube.com/watch?v=b6Ow1eBy7RI"
+          target="_blank"
+          rel="noreferrer">
+          {language === 'PT'
+            ? 'Usando Docker e Poetry para desenvolvimento'
+            : 'Using Docker and Poetry for development'}
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.youtube.com/watch?v=WRJGogeSMqU"
+          target="_blank"
+          rel="noreferrer">
+          {language === 'PT'
+            ? 'Construindo uma interface de linha de comando com a biblioteca argparse'
+            : 'Building a command line interface with the argparse library'}
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.youtube.com/watch?v=_78stm2WpYM"
+          target="_blank"
+          rel="noreferrer">
+          {language === 'PT'
+            ? 'Configurando o novo site da python Floripa'
+            : 'Configuring the new Florianópolis Python community website'}
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.youtube.com/watch?v=eO1IbmsrcOQ"
+          target="_blank"
+          rel="noreferrer">
+          {language === 'PT'
+            ? 'Em busca da primeira oportunidade como pessoa desenvolvedora'
+            : 'Searching for the first opportunity as a developer'}
+        </a>
+      </li>
+    </ul>
+  );
+}
+
+function addCodes(language: T.languagesCode): JSX.Element {
+  return (
+    <ul>
+      <li>
+        <a
+          href="https://github.com/mateusoliveira43/cly"
+          target="_blank"
+          rel="noreferrer">
+          <b>CLY?!</b>{' '}
+          {language === 'PT'
+            ? 'Modelo de Interface de Linha de Comando (CLI) utilizando a biblioteca padrão do Python argparse.'
+            : 'Command Line Interface (CLI) script template using Python standard library argparse.'}
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/mateusoliveira43/docky"
+          target="_blank"
+          rel="noreferrer">
+          <b>Docky:</b>{' '}
+          {language === 'PT'
+            ? 'Execute comandos Docker com Python.'
+            : 'Run Docker commands with Python.'}
+        </a>
+      </li>
+    </ul>
+  );
+}
+
+function addGames(): JSX.Element {
+  return (
+    <ul className="row row-cols-sm-3">
+      <S.Li>Crash Bandicoot</S.Li>
+      <S.Li>THE LAST OF US</S.Li>
+      <S.Li>inFAMOUS</S.Li>
+      <S.Li>STAR WARS THE FORCE UNLEASHED</S.Li>
+      <S.Li>MEGAMAN</S.Li>
+    </ul>
+  );
+}
 
 // TODO use clearfix class
 // https://getbootstrap.com/docs/5.0/layout/columns/#standalone-column-classes
@@ -393,7 +423,9 @@ export default function About(properties: T.currentLanguage): JSX.Element {
         PROFESSIONAL[properties.language],
       )}
       {addSection(
-        properties.language === 'PT' ? 'Comunidade' : 'Community',
+        properties.language === 'PT'
+          ? 'Comunidade e código aberto'
+          : 'Community and Open Source',
         COMMUNITY[properties.language],
       )}
       {addSection(

@@ -6,4 +6,4 @@ $ROOT/scripts/env.sh
 docker-compose \
 --file $ROOT/docker/docker-compose.yaml \
 --project-directory $ROOT \
-run --rm --service-ports --entrypoint sh m43
+run --rm --service-ports m43 sh

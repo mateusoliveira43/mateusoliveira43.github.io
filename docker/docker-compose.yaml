@@ -3,8 +3,10 @@ services:
     image: ${PROJECT_NAME}
     container_name: ${PROJECT_NAME}
     entrypoint: ["./docker/entrypoint.sh"]
+    command: ["npm", "start"]
     ports:
-      - ${PORT}:${PORT}
+      - target: ${PORT}
+        published: ${PORT}
     build:
       context: ./
       dockerfile: ./docker/Dockerfile

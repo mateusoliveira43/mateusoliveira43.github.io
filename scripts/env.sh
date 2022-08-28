@@ -14,7 +14,6 @@ if ! test -f $FILE; then
   echo "USER_HOME=$USER_HOME" >> $FILE
   echo "PROJECT_NAME=$PROJECT_NAME" >> $FILE
   echo "WORK_DIR=$WORK_DIR" >> $FILE
-  echo 'HOST=0.0.0.0' >> $FILE
   echo 'PORT=3000' >> $FILE
   echo ".env file created in project's root"
 fi

@@ -80,12 +80,12 @@ const MONTHS: T.months = {
 // TODO Read version from package.json
 // TODO create test for date
 function addVersion(language: T.languagesCode): JSX.Element {
-  const day = 11;
+  const day = 28;
   const month = 8;
   const year = 2022;
   return (
     <h5>
-      <b>{language === 'PT' ? 'Versão' : 'Version'} 3.0.0:</b>{' '}
+      <b>{language === 'PT' ? 'Versão' : 'Version'} 3.0.1:</b>{' '}
       {language === 'PT'
         ? `atualizado em ${day} de ${MONTHS[language][month - 1]} de ${year}.`
         : `updated in ${MONTHS[language][month - 1]} ${day}, ${year}.`}
