@@ -6,4 +6,4 @@ NODE_MODULES="$ROOT/node_modules"
 if ! test -d $NODE_MODULES; then
   npm ci
 fi
-exec npm start
+exec $@
