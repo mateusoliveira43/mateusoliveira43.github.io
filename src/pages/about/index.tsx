@@ -121,9 +121,19 @@ const COMMUNITY: T.sectionsComponents = {
           rel="noreferrer">
           Python Floripa
         </a>{' '}
-        durante a pandemia. Também já palestrei sobre os seguintes assuntos.
+        durante a pandemia. Também já palestrei sobre os seguintes assuntos:
       </p>
       {addTalks('PT')}
+      <p>
+        Também já palestrei na{' '}
+        <a href="https://pythonsul.dev/" target="_blank" rel="noreferrer">
+          Python Sul
+        </a>{' '}
+        sobre os seguintes assuntos:
+        <ul>
+          <li>Métricas de qualidade para um projeto Python</li>
+        </ul>
+      </p>
       <p>Mantenho os seguintes projetos atualmente:</p>
       {addCodes('PT')}
     </React.Fragment>
@@ -139,9 +149,19 @@ const COMMUNITY: T.sectionsComponents = {
           Florianópolis Python community
         </a>{' '}
         during the pandemic. I have also already given talks (in Portuguese)
-        about the following topics.
+        about the following topics:
       </p>
       {addTalks('EN')}
+      <p>
+        I have also already given talks (in Portuguese) in the{' '}
+        <a href="https://pythonsul.dev/" target="_blank" rel="noreferrer">
+          Brazilian southern region Python communities conference
+        </a>{' '}
+        about the following topics:
+        <ul>
+          <li>Quality metrics for a Python Project</li>
+        </ul>
+      </p>
       <p>I currently maintain the following projects:</p>
       {addCodes('EN')}
     </React.Fragment>
@@ -367,6 +387,28 @@ function addCodes(language: T.languagesCode): JSX.Element {
           {language === 'PT'
             ? 'Execute comandos Docker com Python.'
             : 'Run Docker commands with Python.'}
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/mateusoliveira43/python-project-template"
+          target="_blank"
+          rel="noreferrer">
+          <b>Python project template:</b>{' '}
+          {language === 'PT'
+            ? 'Modelo de projeto Python voltado a qualidade e automação.'
+            : 'Template for a Python project focused on quality and automation.'}
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://github.com/mateusoliveira43/docker-image-poetry"
+          target="_blank"
+          rel="noreferrer">
+          <b>Docker Image with Poetry:</b>{' '}
+          {language === 'PT'
+            ? 'Imagem Docker com Poetry hospedada no Docker Hub.'
+            : 'Docker Image with Poetry hosted in Docker Hub.'}
         </a>
       </li>
     </ul>

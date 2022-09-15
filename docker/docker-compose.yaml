@@ -1,7 +1,7 @@
 services:
   m43:
-    image: ${PROJECT_NAME}
-    container_name: ${PROJECT_NAME}
+    image: ${SERVICE_NAME}
+    container_name: ${SERVICE_NAME}
     entrypoint: ["./docker/entrypoint.sh"]
     command: ["npm", "start"]
     ports:
@@ -14,7 +14,7 @@ services:
         USER_ID: ${USER_ID}
         GROUP_ID: ${GROUP_ID}
         USER_NAME: ${USER_NAME}
-        USER_HOME: ${USER_HOME}
+        USER_HOME: /home/${USER_NAME}
         WORK_DIR: ${WORK_DIR}
     volumes:
       - type: bind

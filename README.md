@@ -17,39 +17,36 @@
 
 Questions and suggestions for improvement are welcome! Get in touch or open a *Issue* or a *Pull Request* reporting them!
 
-# Requirements
+## Requirements
 
+- [Python](https://wiki.python.org/moin/BeginnersGuide/Download) 3.7 or higher
 - [Docker](https://docs.docker.com/get-docker/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
-# Usage
+## Development
 
-To change Docker/website configuration, change the variables in `.env` file. It is created automatically when a docker script is called.
-
-## Docker
-
-Run the commands presented in this section in a Linux's shell.
+To change Container/website configuration, change the variables in `.env` file. It is created automatically when a docker script is called.
 
 To start the website (in development mode), run
 ```
-docker/up.sh
+./scripts/docky.py up
 ```
 To stop it, run `CTRL+C`.
 
 To connect to container's shell, run
 ```
-docker/run.sh
+./scripts/docky.py run sh
 ```
 To exit the container's shell, run `CTRL+D` or `exit`.
 
 To remove the project's containers, images, volumes and networks, run
 ```
-docker/down.sh
+./scripts/docky.py down
 ```
 
-## Website
+Run the commands presented in the following section in the container's shell.
 
-Run the commands presented in this section in the container's shell.
+## Website
 
 To install the website dependencies, run
 ```
@@ -74,13 +71,11 @@ npm run prod
 To stop it, run `CTRL+C`.
 
 
-# Quality
-
-Run the commands presented in this section in the container's shell.
+## Quality
 
 The quality metrics of the project are reproduced by the continuos integration (CI) pipeline of the project. CI configuration in [`.github/workflows/ci.yml`](.github/workflows/ci.yml) file.
 
-## Tests
+### Tests
 
 To run tests and coverage report, run
 ```
@@ -91,7 +86,7 @@ To see the html report, check `coverage-results/lcov-report/index.html`.
 
 Tests and coverage configuration in [`jest.config.ts`](jest.config.ts) file.
 
-## Linter
+### Linter
 
 To run JavaScript linter, run
 ```
@@ -100,7 +95,7 @@ npm run lint
 
 JavaScript linter configuration in [`.eslintrc.js`](.eslintrc.js) file.
 
-## Code formatter
+### Code formatter
 
 To format JavaScript code, run
 ```
@@ -109,7 +104,7 @@ npm run lint -- --fix
 
 JavaScript code formatter configuration in [`.prettierrc.js`](.prettierrc.js) file.
 
-## Security vulnerability scanners
+### Security vulnerability scanners
 
 To check known security vulnerabilities in JavaScript dependencies, run
 ```
@@ -121,6 +116,6 @@ To check for outdated JavaScript dependencies, run
 npm outdated --long
 ```
 
-# License
+## License
 
 This repository is licensed under the terms of [MIT License](LICENSE).
